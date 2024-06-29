@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>activity_main.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #ffffff;}
+.s2 { color: #54b33e;}
+.s3 { color: #ebebeb;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_main.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;RelativeLayout </span><span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:background</span><span class="s2">=&quot;@color/material_dynamic_primary10&quot;</span>
+    <span class="s1">android:fitsSystemWindows</span><span class="s2">=&quot;true&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;include</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/toolbar&quot;</span>
+        <span class="s1">layout</span><span class="s2">=&quot;@layout/activity_main&quot; </span><span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;androidx.cardview.widget.CardView</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;220dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_alignParentEnd</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">android:layout_margin</span><span class="s2">=&quot;10dp&quot;</span>
+        <span class="s1">app:cardCornerRadius</span><span class="s2">=&quot;20dp&quot;</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;LinearLayout</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;50dp&quot;</span>
+            <span class="s1">android:orientation</span><span class="s2">=&quot;horizontal&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;SearchView</span>
+                <span class="s1">android:id</span><span class="s2">=&quot;@+id/searchDoa&quot;</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+                <span class="s1">android:iconifiedByDefault</span><span class="s2">=&quot;false&quot;</span>
+                <span class="s1">android:paddingStart</span><span class="s2">=&quot;-10dp&quot;</span>
+                <span class="s1">android:queryHint</span><span class="s2">=&quot;Mau cari doa apa?&quot;</span>
+                <span class="s1">android:searchIcon</span><span class="s2">=&quot;@drawable/ic_search&quot;</span>
+                <span class="s1">android:theme</span><span class="s2">=&quot;@style/SearchView&quot;</span>
+                <span class="s1">app:queryBackground</span><span class="s2">=&quot;@android:color/transparent&quot; </span><span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;/LinearLayout&gt;</span>
+
+    <span class="s0">&lt;/androidx.cardview.widget.CardView&gt;</span>
+
+    <span class="s0">&lt;androidx.coordinatorlayout.widget.CoordinatorLayout</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_below</span><span class="s2">=&quot;@+id/toolbar&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;20dp&quot;</span>
+
+        <span class="s1">android:background</span><span class="s2">=&quot;@drawable/bg_rounded_rect&quot;</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;androidx.core.widget.NestedScrollView</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;10dp&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s0">&lt;LinearLayout</span>
+                <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+                <span class="s1">android:orientation</span><span class="s2">=&quot;vertical&quot;</span><span class="s0">&gt;</span>
+
+                <span class="s0">&lt;androidx.recyclerview.widget.RecyclerView</span>
+                    <span class="s1">android:id</span><span class="s2">=&quot;@+id/rvListDoa&quot;</span>
+                    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+                    <span class="s1">android:layout_margin</span><span class="s2">=&quot;5dp&quot; </span><span class="s0">/&gt;</span>
+
+            <span class="s0">&lt;/LinearLayout&gt;</span>
+
+        <span class="s0">&lt;/androidx.core.widget.NestedScrollView&gt;</span>
+
+    <span class="s0">&lt;/androidx.coordinatorlayout.widget.CoordinatorLayout&gt;</span>
+
+<span class="s0">&lt;/RelativeLayout&gt;</span></pre>
+</body>
+</html>
